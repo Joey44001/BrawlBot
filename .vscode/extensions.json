@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "hamolicious.autoinit",
+        "daniellin.auto-header",
+        "hitode909.auto-programming",
+        "njpwerner.autodocstring",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "franneck94.c-cpp-runner",
+        "divdikpub.cpp-runner",
+        "ms-dotnettools.csharp",
+        "taldennis-unfoldai-chatgpt-copilot.unfoldai",
+        "david9991.plcc-plugin",
+        "codesnippetsai.codesnippetsai",
+        "github.copilot"
+    ]
+}

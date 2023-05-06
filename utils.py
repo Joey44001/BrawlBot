@@ -1,26 +1,4 @@
-from offsets import *
-from memorpy.WinStructures import PAGE_READWRITE
-import re
 
-from collections import namedtuple
-Entity = namedtuple('Entity', 'x y can_dodge not_grounded in_animation in_stun direction weapon jump_count, damage_taken x_vel y_vel in_attack increased_gravity in_edging')
-
-def is_base_of_entity(mem, address):
-    # verify entity by checking for recursive pointer
-    try:
-        ptr = address
-        for offset in recursive_ptr_offsets:
-            ptr = mem.Address(ptr + offset).read()
-        if ptr != address:
-            return False
-    except:
-        return False
-    else:
-        return True
-
-def aob_scan(mem, entity_pointers, start, size, pattern=None, offset=0, entity_check=False):
-    all_the_bytes = mem.process.read(mem.Address(start), type='bytes', maxlen=size)
-    matches = re.finditer(pattern, all_the_bytes)
     for match in matches:
         span = match.span()
         if span:
